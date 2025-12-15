@@ -101,6 +101,17 @@ xcode-select --install
 ### Build fails on Windows
 Ensure Visual Studio Build Tools with C++ workload is installed.
 
+### Permission Error: "Resource not accessible by integration"
+If you see this error when creating releases:
+
+1. Go to your repository **Settings** → **Actions** → **General**
+2. Scroll to **Workflow permissions**
+3. Select **Read and write permissions**
+4. Check **Allow GitHub Actions to create and approve pull requests**
+5. Click **Save**
+
+Alternatively, the workflow already includes `permissions: contents: write` which should handle this automatically for most repositories.
+
 
 ## CI/CD Pipeline
 
